@@ -2,9 +2,13 @@
 
 I hate restrictions online. We hate restrictions online.
 
-I Hate Restrictions Online is a blog ranting about various online restrictions and stupid ideas, with text written by the community. Built with [Jekyll](https://jekyllrb.com/).
+I Hate Restrictions Online is a blog ranting about various online restrictions and stupid ideas, with text written by the community.
 
-### ToC - Table of Content
+Built with [Jekyll](https://jekyllrb.com/), hosted with [Netlify](https://www.netlify.com/), with an SSL certificate from [Let's Encrypt](https://letsencrypt.org/).
+
+[Visit the website!](https://i-hate-restrictions.online/)
+
+### Table of Content
 - [Running Locally](#running-locally)
 - [Contribution](#contribution)
 - [License](#license)
@@ -29,4 +33,4 @@ Following these short guidelines will make it easier and faster for your Issue/P
 Thanks!
 
 ### License
-I Hate Restrictions Online is an open blog that anyone can publish to. Read more about the license used [here](https://github.com/Mnpn03/I-Hate-Restrictions-Online/blob/master/LICENSE).
+I Hate Restrictions Online is an open blog that anyone can publish to. [Contribute](#contribution). You can read more about the license used [here](https://github.com/Mnpn03/I-Hate-Restrictions-Online/blob/master/LICENSE).
