@@ -1,0 +1,19 @@
+body {
+	background: #161616;
+    color: #d1d1d1;
+    margin-top: 10%;
+}
+
+h1, h4 {
+    font-family: Roboto,Helvetica,Arial,sans-serif;
+    text-align: center;
+    font-weight: 100;
+}
+
+a {
+	text-decoration: none;
+}
+
+.thin {
+	font-weight: 100;
+}
