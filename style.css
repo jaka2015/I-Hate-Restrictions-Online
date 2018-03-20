@@ -1,10 +1,9 @@
 body {
 	background: #161616;
     color: #d1d1d1;
-    margin-top: 10%;
 }
 
-h1, h4 {
+h1, h3, h4 {
     font-family: Roboto,Helvetica,Arial,sans-serif;
     text-align: center;
     font-weight: 100;
@@ -14,6 +13,24 @@ a {
 	text-decoration: none;
 }
 
+.mid {
+	margin-top: 10%;
+}
+
 .thin {
 	font-weight: 100;
+}
+
+.temp_head { 
+	background: linear-gradient(275deg, #ff7f00, #ff0077, #ff0000);
+	height: 4%;
+}
+
+.bottom {
+	position: fixed;
+	left: 50%;
+	bottom: 20px;
+	transform: translate(-50%, -50%);
+	margin: 0 auto;
+	color: grey;
 }
