@@ -110,11 +110,6 @@ footer {
 	margin-left: 10px;
 }
 
-/* Effects */
-.shadow {
-    box-shadow: 0 4px 12px 0 rgba(128, 0, 128, 0.3);
-}
-
 .titletext {
 	font-size: 36px;
 	text-align: left;
