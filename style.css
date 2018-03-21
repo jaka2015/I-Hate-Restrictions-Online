@@ -101,20 +101,19 @@ footer {
 
 .footerright {
 	float: right;
-	margin-right: 10px;
+	margin-right: 14px;
 	color: grey;
 }
 
 .footerleft {
 	float: left;
-	margin-left: 10px;
+	margin-left: 14px;
 }
 
 .titletext {
-	font-size: 36px;
+	font-size: 28px;
 	text-align: left;
 	margin-left: 10px;
-	font-weight: 200;
 	padding-top: 12px;
 }
 
