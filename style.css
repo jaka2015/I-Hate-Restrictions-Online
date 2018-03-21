@@ -6,6 +6,8 @@ body {
 	font-family: Roboto,Helvetica,Arial,sans-serif;
 	text-align: center;
 	font-weight: 100;
+	margin: 0;
+	padding: 0;
 }
 
 h1, h2, h3, h4, h5 {
@@ -62,7 +64,6 @@ header {
 	box-shadow: 0 0 4px black;
 	height: 64px;
 	left: 0;
-	position: fixed;
 	top: 0;
 	width: 100%;
 	z-index: 1;
