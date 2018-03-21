@@ -109,18 +109,20 @@ footer {
 	float: right;
 	margin-right: 14px;
 	color: grey;
+	transition: .8s color;
+}
+
+.footerright:hover {
+	color: white;
+}
+
+.footerright a {
+	color: inherit;
 }
 
 .footerleft {
 	float: left;
 	margin-left: 14px;
-}
-
-.titletext {
-	font-size: 28px;
-	text-align: left;
-	margin-left: 10px;
-	padding-top: 12px;
 }
 
 .animated-link {
