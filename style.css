@@ -15,6 +15,12 @@ h1, h2, h3, h4, h5 {
 	font-weight: 300;
 }
 
+hr {
+    border: 0;
+    border-top: 1px solid grey;
+    margin-bottom: 25px;
+}
+
 a {
 	text-decoration: none;
 	-moz-transition: color 350ms;
@@ -158,6 +164,24 @@ footer {
 	box-shadow: inset 0 0 1px rgba(255, 255, 255, 0.6);
 }
 
+.navigation a {
+	width: 100px;
+	margin: 6px;
+	padding: 12px;
+	background: rgba(255, 255, 255, 0.02);
+	border-bottom: 3px solid rgba(255, 255, 255, 0.1);
+	color: inherit;
+	transition: background .2s ease-in-out, box-shadow .4s, color .6s, border-bottom 2s;
+	position: relative;
+}
+
+.navigation a:hover {
+	color: red;
+	background: rgba(255, 255, 255, 0.1);
+	border-bottom: 3px solid rgba(255, 0, 0, 1);
+	box-shadow: inset 0 0 1px rgba(255, 255, 255, 0.6);
+}
+
 .grey {
 	color: grey;
 }
@@ -232,6 +256,8 @@ footer {
 /* Posts */
 .post {
 	padding: 30px;
+	margin: 10px;
+	text-align: left
 }
 .post h2, h4 {
 	margin: 2px;
