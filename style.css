@@ -195,8 +195,27 @@ footer {
 		display: flex;
 		vertical-align: middle;
 		margin: auto;
-		width: 200px;
+		width: 100px;
 		margin-top: 12px;
+	}
+	.categories a {
+		display: inline-flex;
+		width: 120px;
+		margin: 5px;
+		padding: 15px;
+		border-bottom: 3px solid rgba(255, 255, 255, 0.1);
+		color: inherit;
+		transition: background .2s ease-in-out, box-shadow .4s, color .6s, border-bottom 2s;
+	}
+	.categories a:hover {
+		background: rgba(255, 255, 255, 0.1);
+		box-shadow: inset 0 0 1px rgba(255, 255, 255, 0.6);
+	}
+	h2, h3, h4, h5 {
+		padding: 12px;
+	}
+	footer h2, h3 {
+		padding: 4px;
 	}
 }
 
