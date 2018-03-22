@@ -1,17 +1,14 @@
 ---
 layout: default
 ---
-<h1>Categories</h1>
+<h1>Categories - Software</h1>
 {%- if site.posts.size > 0 -%}
 	<h2>Posts:</h2>
 		{% for post in site.categories.software %}
-			{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+			{%- assign date_format = "%b %-d, %Y" -%}
 			<h3>
-				{{ post.date | date: date_format }}: <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+				{{ post.date | date: date_format }}: <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
 			</h3>
-		{%- if site.show_excerpts -%}
-			{{ post.excerpt }}
-		{%- endif -%}
 		{%- endfor -%}
 {%- else -%}
 	<h1>There are no posts in this category.</h1>

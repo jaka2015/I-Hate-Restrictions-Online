@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<h1>All Posts</h1>
+{%- if site.posts.size > 0 -%}
+	{% for post in site.posts %}
+		{%- assign date_format = "%b %-d, %Y" -%}
+		<h3>
+			{{ post.date | date: date_format }}: <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+		</h3>
+	{%- endfor -%}
+{%- else -%}
+	<h1>There are no posts yet.</h1>
+{%- endif -%}

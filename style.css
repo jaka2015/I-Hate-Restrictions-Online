@@ -203,3 +203,11 @@ footer {
 /* Vote right hamburger menu alignment!
 	I personally find that easier on mobile since I'm right handed.
 	Sorry lefties! */
+
+/* Posts */
+.post {
+	padding: 30px;
+}
+.post h2, h4 {
+	margin: 2px;
+}
