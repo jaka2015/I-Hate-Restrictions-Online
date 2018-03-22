@@ -64,10 +64,9 @@ header {
 	border-top: 2px solid #002f7c;
 	box-shadow: 0 0 4px black;
 	height: 64px;
-	left: 0;
-	top: 0;
 	width: 100%;
-	z-index: 1;
+	z-index: 100;
+	position: relative;
 }
 
 nav {
@@ -141,7 +140,31 @@ footer {
 @media only screen and (max-width: 767px) {
 	.mobile { display: inline; }
 	nav { position: absolute; right: 0; }
-	.desktop { display: none; }
+	#desktop {
+		background: black;
+		display: block;
+		height: 50vh;
+		width: 100vw;
+		z-index: 0;
+
+		transition: 1s top;
+
+		position: fixed;
+		top: calc(64px + 2px * 2);
+		right: 0;
+	}
+	#desktop.hidden {
+		top: -50vh;
+	}
+	#desktop a {
+		font-size: 20px;
+		padding: 5px;
+		display: block;
+		border-bottom: none;
+	}
+	#desktop a:hover {
+		border-bottom: none;
+	}
 }
 
 /* Vote right hamburger menu alignment!

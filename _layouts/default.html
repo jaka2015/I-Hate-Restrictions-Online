@@ -20,16 +20,19 @@
 		<meta property="og:locale" content="en_UK" />
 
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="/script.js"></script>
 	</head>
 	<body>
 		<header>
 			<nav>
-				<a class="material-icons mobile">menu</a>
-				<a class="desktop" href="/">Home</a>
-				<a class="desktop" href="/1.html">Features Posts</a>
-				<a class="desktop" href="/2.html">Categories</a>
-				<a class="desktop" href="/3.html">[TBD]</a>
-				<a class="desktop" href="/about.html">About</a>
+				<a class="material-icons mobile" href="#" id="menu_toggle">menu</a>
+				<div id="desktop" class="hidden">
+					<a href="/">Home</a>
+					<a href="/1.html">Features Posts</a>
+					<a href="/2.html">Categories</a>
+					<a href="/3.html">[TBD]</a>
+					<a href="/about.html">About</a>
+				</div>
 			</nav>
 		</header>
 		{{ content }}
