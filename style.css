@@ -58,10 +58,7 @@ a:hover {
 }
 
 .bottom {
-	position: fixed;
 	left: 50%;
-	bottom: 100px;
-	transform: translate(-50%, -50%);
 	color: grey;
 }
 
@@ -268,7 +265,7 @@ footer {
 /* Featured */
 .block {
 	display: inline-block;
-	vertical-align: top;
+	vertical-align: bottom;
 	width: 250px;
 	height: 250px;
 	background-color: #262626;
@@ -277,9 +274,13 @@ footer {
 	box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0);
 	transition: .4s transform, 1s box-shadow;
 	padding: 12px;
+	margin-bottom: 12px;
 }
 
 .block:hover {
 	box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.3);
 	transform: scale(1.03);
 }
+
+/* Really lazy work-around. It works. */
+.block h5 { height: 100px }
