@@ -15,7 +15,7 @@ layout: post
 title:  "The best title you can come up with!"
 date:   2018-01-01 01:00:00 +0100
 categories: software
-author:
+author: Me!
 ---
 Your post content then goes here, markdown is enabled!
 ```
