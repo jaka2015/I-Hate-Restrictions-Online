@@ -167,8 +167,6 @@ footer {
 }
 
 .navigation a {
-	width: 100px;
-	margin: 6px;
 	padding: 12px;
 	background: rgba(255, 255, 255, 0.02);
 	border-bottom: 3px solid rgba(255, 255, 255, 0.1);
@@ -248,6 +246,9 @@ footer {
 	}
 	footer h2, h3 {
 		padding: 4px;
+	}
+	body {
+		margin-bottom: 108px;
 	}
 }
 
