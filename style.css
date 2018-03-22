@@ -144,6 +144,7 @@ footer {
 	width: 200px;
 	margin: 12px;
 	padding: 40px;
+	background: rgba(255, 255, 255, 0.02);
 }
 
 .categories a:hover {
