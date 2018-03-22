@@ -137,33 +137,40 @@ footer {
 .mobile { display: none; } 
 .desktop { display: inline; }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 700px) {
 	.mobile { display: inline; }
 	nav { position: absolute; right: 0; }
+	header { background: rgba(0, 0, 0, 0.8); }
 	#desktop {
-		background: black;
+		background: rgba(0, 0, 0, 0.8);
 		display: block;
-		height: 50vh;
+		height: 60vh;
 		width: 100vw;
-		z-index: 0;
+		z-index: -1;
 
-		transition: 1s top;
+		transition: .5s top;
+		transition-timing-function: ease;
 
 		position: fixed;
-		top: calc(64px + 2px * 2);
+		top: calc(64px + 1px * 2);
 		right: 0;
+		box-shadow: 0 0 4px black;
 	}
 	#desktop.hidden {
-		top: -50vh;
+		top: -60vh;
 	}
 	#desktop a {
-		font-size: 20px;
-		padding: 5px;
-		display: block;
-		border-bottom: none;
+		background: rgba(255, 255, 255, 0.1);
+		border-bottom: 3px solid rgba(255, 175, 0, 1);
+		box-shadow: inset 0 0 1px rgba(255, 255, 255, 0.6);
+		display: flex;
+		vertical-align: middle;
+		margin: auto;
+		width: 200px;
+		margin-top: 12px;
 	}
 	#desktop a:hover {
-		border-bottom: none;
+		box-shadow: inset 0 0 1px rgba(255, 255, 255, 0.6);
 	}
 }
 
