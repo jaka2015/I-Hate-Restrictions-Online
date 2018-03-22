@@ -17,9 +17,9 @@ h1, h2, h3, h4, h5 {
 }
 
 hr {
-    border: 0;
-    border-top: 1px solid grey;
-    margin-bottom: 25px;
+	border: 0;
+	border-top: 1px solid grey;
+	margin-bottom: 25px;
 }
 
 a {
@@ -60,9 +60,8 @@ a:hover {
 .bottom {
 	position: fixed;
 	left: 50%;
-	bottom: 8%;
+	bottom: 100px;
 	transform: translate(-50%, -50%);
-	margin: 0 auto;
 	color: grey;
 }
 
@@ -264,4 +263,23 @@ footer {
 }
 .post h2, h4 {
 	margin: 2px;
+}
+
+/* Featured */
+.block {
+	display: inline-block;
+	vertical-align: top;
+	width: 250px;
+	height: 250px;
+	background-color: #262626;
+	color: orange;
+	border-radius: 5px;
+	box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0);
+	transition: .4s transform, 1s box-shadow;
+	padding: 12px;
+}
+
+.block:hover {
+	box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.3);
+	transform: scale(1.03);
 }

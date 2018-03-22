@@ -1,8 +1,37 @@
 ---
 layout: default
 ---
-<h1>Content Title</h1>
-<h3>We're putting the front page stuff here!</h3>
-<h1>Featured Posts</h1>
-<h2 class="mid">The actual content goes somewhere around here.</h2>
-<h3 class="bottom">This text is positioned down here!</h3>
+<h1>I Hate Restrictions Online</h1>
+<h3 style="margin: 25px">
+	I hate restrictions online. We hate restrictions online.
+	I Hate Restrictions Online is a blog ranting about various online restrictions and stupid ideas, with text written by the community.
+</h3>
+	<div class="block">
+		<h3>Title</h3>
+		<h5>
+			This is placeholder text. It is very boring, so boring that you should just stop reading and start clicking around. I'm not even truncating this text, how nice.
+		</h5>
+		<div class="navigation">
+			<a href="https://github.com/synac-chat/server/releases">Download Server</a>
+		</div>
+	</div>
+	<div class="block" style="background-color: #363636;">
+		<h3>Title</h3>
+		<h5>
+			This is placeholder text. It is very boring, so boring that you should just stop reading and start clicking around. I'm not even truncating this text, how nice.
+		</h5>
+		<div class="navigation">
+			<a href="https://github.com/synac-chat/client/releases">Download Client</a>
+		</div>
+	</div>
+	<div class="block">
+		{% assign post = site.posts.first %}
+		<h3>Most recent post</h3>
+		<h5>
+			{{ post.content | strip_html | truncate: 250 }}
+		</h5>
+		<div class="navigation">
+			<a href="{{ post.url }}">Read more</a>
+		</div>
+	</div>
+<h3 class="bottom">Check out our <a href="https://github.com/Mnpn03/I-Hate-Restrictions-Online">GitHub</a> for more info on how to publish your own post.</h3>
