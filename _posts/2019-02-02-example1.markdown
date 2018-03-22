@@ -1,7 +1,15 @@
 ---
-layout: default
-title:  "Example!"
-date:   2018-03-21 13:47:05 +0100
+layout: post
+title:  "Markdown introduced!"
+date:   2018-03-22 18:38:05 +0100
+author: Mnpn
 categories: software
 ---
-Just another blog post
+Just another blog post. It supports `full markdown`, which is *quite cool*. **Very cool**. ***Yeah!***
+```HTML
+<h1>BAM!</h1>
+```
+# Markdown!
+## Markdown!!
+### Markdown!!!
+Isn't that cool?

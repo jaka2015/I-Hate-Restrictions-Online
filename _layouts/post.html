@@ -7,9 +7,13 @@ layout: default
 	{{ content }}
 	<hr />
 	<div class="navigation">
-		<a href="">Previous post</a>
-		<a href="">Next post</a>
-		<h4 class="footerright">
+		{% if page.previous.url %}
+			<a href="{{page.previous.url}}">Previous post</a>
+		{% endif %}
+		{% if page.next.url %}
+			<a href="{{page.next.url}}">Next post</a>
+		{% endif %}
+		<h4 class="footerright" style="margin-top: 12px">
 			Tagged categories: {{ page.categories | array_to_sentence_string }}
 		</h4>
 	</div>
