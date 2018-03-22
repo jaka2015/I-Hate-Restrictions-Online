@@ -19,3 +19,32 @@ layout: default
 <h1><i>4</i>04</h1>
 <h2>Page not found :(</h2>
 <h3>The requested page could not be found.</h3>
+---
+layout: default
+---
+
+<!-- Changing some values from blue to red, just a tiny detail. -->
+<style>
+  h1 {
+    font-size: 6em;
+    margin-bottom: 50px;
+  }
+  footer {
+    box-shadow: 8px 0 0 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(255,0,0,0.3);
+  }
+  header {
+    border-top: 2px solid #ff0000;
+  }
+    .text {
+        padding: 30px;
+	margin: 10px;
+	text-align: left
+    }
+</style>
+
+<div class="text">
+    <h5 class="grey"><i>4</i>04</h5>
+    <h1>:^)</h1>
+    <h2>You've reached the 404 page. The page you were trying to reach does not exist. Well done. 👏"</h2>
+    <h3>I don't know how you even got here. If you believe you've reached this page in error, contact us at {{ site.email }}."</h3>
+</div>
