@@ -1,0 +1,7 @@
+---
+layout: default
+title:  "Example!"
+date:   2018-03-21 13:47:05 +0100
+categories: software
+---
+Just another blog post
