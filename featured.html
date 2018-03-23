@@ -1,13 +1,36 @@
 ---
 layout: default
 ---
-<h1>Featured Posts</h1>
-<div class="block" style="background-color: #363636;">
-	<h3>Title</h3>
+<h1>Featured Post</h1>
+{% if site.featured %}
+{% for post in site.posts %}
+	{% if post.title == site.featured %}
+<div class="block" style="background-color: #363636">
+	<h3>Admin's note</h3>
 	<h5>
-		This post is featured, how nice!
+		We've decided to feature this post {{ site.featuredreason }} 
 	</h5>
-	<div class="navigation">
-		<a href="">Link</a>
-	</div>
 </div>
+
+<hr style="width: 50%" />
+
+<div class="post">
+	<h2>{{ post.title }}</h2>
+	<h4 class="grey"><i>Written by {{ post.author }} on {{ post.date | date: "%-d %B %Y"}}.</i></h2>
+	{% if post.description %}
+		<h4 class="grey"><i>"{{ post.description }}"</i></h4>
+	{% endif %}
+	{{ post.content }}
+	<hr />
+		<div class="navigation">
+			<a href="/">Return home</a>
+			<h4 class="footerright">
+				Tagged categories: {{ post.categories | array_to_sentence_string }}
+			</h4>
+		</div>
+</div>
+	{% endif %}
+{% endfor %}
+{% else %}
+	<h2>There is no featured post.</h2>
+{% endif %}

@@ -20,7 +20,7 @@ layout: default
 	</div>
 	<div class="block" style="background-color: #363636;">
 		{% for post in site.posts %}
-			{% if post.title == "Watching a movie in Sweden" %}
+			{% if post.title == site.featured %}
 				<h3>Featured Post</h3>
 				<h5>
 					<i>{{ post.title | truncate: 50 }}</i>:<br />
