@@ -6,19 +6,20 @@ layout: default
 <div class="categories">
 	<a href="/categories/software">Software</a>
 	<a href="/categories/hardware">Hardware</a>
-	<a href="/categories/x">Reserved</a>
+	<a href="/categories/prices">Prices</a>
 	<a href="/categories/all">All</a>
 </div>
 
 <h4 class="mid grey"><i>Hint: You can categorise your post by adding this to the top of it:</i></h4>
 <div class="highlight">
 {% highlight html %}
-	---
-	layout: post
-	title:  "Your post title goes here!"
-	date:   2018-01-01 01:00:00 +0100
-	author: Me!
-	categories: software online
-	---
-	{% endhighlight %}
+---
+layout: post
+title:  "Your post title goes here!"
+date:   2018-01-01 01:00:00 +0100
+author: Me!
+description: "I like to describe my post."
+categories: software online
+---
+{% endhighlight %}
 </div>

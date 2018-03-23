@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<h1>Categories - Prices</h1>
+{%- if site.posts.size > 0 -%}
+{%- if site.categories.prices.size > 0 -%}
+	<h2>Posts:</h2>
+		{% for post in site.categories.prices %}
+			{%- assign date_format = "%b %-d, %Y" -%}
+			<h3>
+				{{ post.date | date: date_format }}: <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+			</h3>
+		{%- endfor -%}
+{%- else -%}
+	<h2>There are no posts in this category.</h2>
+{%- endif -%}
+{%- endif -%}
