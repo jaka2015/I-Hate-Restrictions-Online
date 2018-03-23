@@ -28,7 +28,8 @@ layout: default
 		{% assign post = site.posts.first %}
 		<h3>Most recent post</h3>
 		<h5>
-			{{ post.content | strip_html | truncate: 250 }}
+			<i>{{ post.title | truncate: 50 }}</i>:<br />
+			{{ post.content | strip_html | truncate: 200 }}
 		</h5>
 		<div class="navigation">
 			<a href="{{ post.url }}">Read more</a>
