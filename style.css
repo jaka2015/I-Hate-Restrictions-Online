@@ -211,7 +211,7 @@ footer {
 	#desktop {
 		background: rgba(0, 0, 0, 0.8);
 		display: block;
-		height: 70vh;
+		height: 75vh;
 		width: 100vw;
 		z-index: -1;
 
@@ -224,7 +224,7 @@ footer {
 		box-shadow: 0 0 4px black;
 	}
 	#desktop.hidden {
-		top: -75vh;
+		top: -100vh;
 	}
 	#desktop a {
 		background: rgba(255, 255, 255, 0.1);
