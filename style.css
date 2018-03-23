@@ -190,13 +190,14 @@ footer {
 }
 
 .smallpost {
-	height: 60px;
+	height: 80px;
 	border-bottom: 1px solid grey;
 	width: 50%;
 	padding-bottom: 10px;
 	position: relative;
 	left: 50%;
 	transform: translate(-50%);
+	word-wrap: break-word;
 }
 
 /* Mobile Optimising */
@@ -264,7 +265,6 @@ footer {
 		position: relative;
 		left: 50%;
 		transform: translate(-50%);
-		word-wrap: break-word;
 	}
 	.smallpost h3 {
 		margin-bottom: 0;
