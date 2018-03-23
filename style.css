@@ -12,7 +12,9 @@ body {
 	padding: 0;
 	margin-bottom: 64px;
 }
-
+h1 {
+	color: #ffc854;
+}
 h1, h2, h3, h4, h5 {
 	font-weight: 300;
 	word-wrap: break-word;
