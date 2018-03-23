@@ -14,13 +14,15 @@ A blog post has to start with this:
 layout: post
 title:  "The best title you can come up with!"
 date:   2018-01-01 01:00:00 +0100
-categories: software
 author: Me!
+description: "Wow, my post can be described here!"
+categories: software
 ---
 Your post content then goes here, markdown is enabled!
 ```
 A post *must* start with a layout, title and date. A category or author is not required, but it's certainly neat to have.
 Note that the author will be displayed on the published post.
+You can describe your post using the `description` tag. It is optional, and will show up at the top of the page and in other places.
 
 You can submit a file or just plain text, it doesn't really matter.
 The important thing is that you always create a [Pull Request](https://github.com/Mnpn03/I-Hate-Restrictions-Online/pulls)!
