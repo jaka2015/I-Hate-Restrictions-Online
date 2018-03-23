@@ -222,9 +222,10 @@ footer {
 		top: calc(64px + 1px * 2);
 		right: 0;
 		box-shadow: 0 0 4px black;
+		overflow: hidden;
 	}
 	#desktop.hidden {
-		top: -100vh;
+		top: -70vh;
 	}
 	#desktop a {
 		background: rgba(255, 255, 255, 0.1);
