@@ -1,16 +1,21 @@
 ---
 layout: default
 ---
-<h1>Categories - Hardware</h1>
+<h1 style="margin-bottom: 5px">Categories - Hardware</h1>
+<h4 class="grey"><i>Sorted by age, newest first.</i></h4>
 {%- if site.posts.size > 0 -%}
 {%- if site.categories.hardware.size > 0 -%}
-	<h2>Posts:</h2>
-		{% for post in site.categories.hardware %}
-			{%- assign date_format = "%b %-d, %Y" -%}
+	{% for post in site.categories.hardware %}
+		{%- assign date_format = "%b %-d, %Y" -%}
+		<div class="smallpost">
 			<h3>
-				{{ post.date | date: date_format }}: <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+				{{ post.date | date: date_format }}: <a href="{{ post.url | relative_url }}">{{ post.title }}</a> | {{ post.categories | array_to_sentence_string }}
 			</h3>
-		{%- endfor -%}
+			{% if post.description %}
+				<h4 class="grey"><i>"{{ post.description | truncate: 84}}"</i></h4>
+			{% endif %}
+		</div>
+	{%- endfor -%}
 {%- else -%}
 	<h2>There are no posts in this category.</h2>
 {%- endif -%}

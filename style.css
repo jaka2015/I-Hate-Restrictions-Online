@@ -27,10 +27,11 @@ a {
 	-moz-transition: color 350ms;
 	-webkit-transition: color 350ms;
 	transition: color 350ms;
+	color: #ffaf00;
 }
 
 a:hover {
-	color: #ffaf00;
+	color: grey;
 }
 
 .mid {
@@ -188,6 +189,16 @@ footer {
 	margin: 0;
 }
 
+.smallpost {
+	height: 60px;
+	border-bottom: 1px solid grey;
+	width: 50%;
+	padding-bottom: 10px;
+	position: relative;
+	left: 50%;
+	transform: translate(-50%);
+}
+
 /* Mobile Optimising */
 .mobile { display: none; } 
 .desktop { display: inline; }
@@ -245,6 +256,15 @@ footer {
 	}
 	body {
 		margin-bottom: 108px;
+	}
+	.smallpost {
+		height: 160px;
+		width: 50%;
+		padding-bottom: 10px;
+		position: relative;
+		left: 50%;
+		transform: translate(-50%);
+		word-wrap: break-word;
 	}
 }
 
