@@ -8,25 +8,27 @@ layout: default
     font-size: 6em;
     margin-bottom: 50px;
   }
-	h5 {
-		margin-bottom: 10px;
-	}
   footer {
     box-shadow: 8px 0 0 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(255,0,0,0.3);
   }
   header {
     border-top: 2px solid #ff0000;
   }
-    .text {
-        padding: 30px;
-	margin: 10px;
-	text-align: left
-    }
+  .text { 
+    -webkit-animation: textcolour 5s infinite;
+    -ms-animation: textcolour 5s infinite;
+    -o-animation: textcolour 5s infinite;
+    animation: textcolour 5s infinite;
+  }
+  @keyframes textcolour {
+    0% { color: #4286f4; }
+    33% { color: #002f7c; }
+    67% { color: #65007f; }
+    100% { color: #4286f4; }
+  }
 </style>
 
-<div class="text">
-    <h4 class="grey"><i>4</i>04</h4>
-    <h1>:^)</h1>
-    <h2>You've reached the 404 page. The page you were trying to reach does not exist. Well done. 👏</h2>
-    <h3>I don't know how you even got here. If you believe you've reached this page in error, contact me at {{ site.email }}.</h3>
-</div>
+<h1 class="text"><i>4</i>04 :^)</h1>
+<h2>Page not found :(</h2>
+<h3>The requested page could not be found. Well done. 👏<br />
+  If you believe you've reached this page in error, contact me at {{ site.email }} or make a <a href="https://github.com/Mnpn03/I-Hate-Restrictions-Online/issues">GitHub issue</a>.</h3>
