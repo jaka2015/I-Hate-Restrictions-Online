@@ -1,3 +1,4 @@
+/* vim: set noexpandtab: */
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 @import url('https://fonts.googleapis.com/css?family=Material+Icons');
 
@@ -211,7 +212,8 @@ footer {
 	header { background: rgba(0, 0, 0, 0.8); }
 	#desktop {
 		background: rgba(0, 0, 0, 0.8);
-		display: block;
+		display: flex;
+		flex-direction: column;
 		height: 75vh;
 		width: 100vw;
 		z-index: -1;
@@ -224,19 +226,19 @@ footer {
 		right: 0;
 		box-shadow: 0 0 4px black;
 		overflow: hidden;
+		box-sizing: border-box;
+		padding: 20px;
 	}
 	#desktop.hidden {
-		top: -70vh;
+		top: -75vh;
 	}
 	#desktop a {
 		background: rgba(255, 255, 255, 0.1);
 		border-bottom: 3px solid rgba(255, 175, 0, 1);
 		box-shadow: inset 0 0 1px rgba(255, 255, 255, 0.6);
-		display: flex;
 		vertical-align: middle;
 		margin: auto;
 		width: 200px;
-		margin-top: 12px;
 	}
 	.categories a {
 		display: inline-flex;
