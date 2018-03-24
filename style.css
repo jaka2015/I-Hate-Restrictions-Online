@@ -208,6 +208,46 @@ footer {
 .mobile { display: none; } 
 .desktop { display: inline; }
 
+/* Vote right hamburger menu alignment!
+	I personally find that easier on mobile since I'm right handed.
+	Sorry lefties! */
+
+/* Posts */
+.post {
+	padding: 50px;
+	padding-top: 20px;
+	margin: 50px;
+	text-align: left
+}
+.post h2, h4 {
+	margin: 2px;
+}
+
+/* Featured */
+.block {
+	display: inline-block;
+	vertical-align: bottom;
+	width: 250px;
+	height: 250px;
+	background-color: #262626;
+	color: orange;
+	border-radius: 5px;
+	box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0);
+	transition: .4s transform, 1s box-shadow;
+	padding: 12px;
+	margin-bottom: 12px;
+}
+
+.block:hover {
+	box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.3);
+	transform: scale(1.03);
+}
+
+/* Really lazy work-around. It works. */
+.block h5 { height: 100px }
+
+/* THIS HAS TO BE LAST */
+
 @media only screen and (max-width: 700px) {
 	.mobile { display: inline; }
 	nav { position: absolute; right: 0; }
@@ -275,42 +315,9 @@ footer {
 	.smallpost h3 {
 		margin-bottom: 0;
 	}
+	.post {
+		padding: 0;
+		margin: 20px;
+	}
 }
 
-/* Vote right hamburger menu alignment!
-	I personally find that easier on mobile since I'm right handed.
-	Sorry lefties! */
-
-/* Posts */
-.post {
-	padding: 50px;
-	padding-top: 20px;
-	margin: 50px;
-	text-align: left
-}
-.post h2, h4 {
-	margin: 2px;
-}
-
-/* Featured */
-.block {
-	display: inline-block;
-	vertical-align: bottom;
-	width: 250px;
-	height: 250px;
-	background-color: #262626;
-	color: orange;
-	border-radius: 5px;
-	box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0);
-	transition: .4s transform, 1s box-shadow;
-	padding: 12px;
-	margin-bottom: 12px;
-}
-
-.block:hover {
-	box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.3);
-	transform: scale(1.03);
-}
-
-/* Really lazy work-around. It works. */
-.block h5 { height: 100px }
