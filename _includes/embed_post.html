@@ -1,0 +1,21 @@
+<h2>{{ include.post.title }}</h2>
+<h4 class="grey"><i>Written by {{ include.post.author }} on {{ include.post.date | date: "%-d %B %Y"}}.</i></h2>
+{% if include.post.description %}
+    <h4 class="grey"><i>"{{ include.post.description }}"</i></h4>
+{% endif %}
+{{ include.post.content }}
+<hr />
+<div class="navigation">
+    {% if include.post.previous.url %}
+        <a href="{{include.post.previous.url}}">Previous post</a>
+    {% endif %}
+    {% if include.post.next.url %}
+        <a href="{{include.post.next.url}}">Next post</a>
+    {% endif %}
+    {% if include.showurl %}
+        <a href="{{include.post.url}}">Original link</a>
+    {% endif %}
+    <h4 class="footerright">
+        Tagged categories: {{ include.post.categories | array_to_sentence_string }}
+    </h4>
+</div>
