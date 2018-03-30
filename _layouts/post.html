@@ -2,22 +2,5 @@
 layout: default
 ---
 <div class="post">
-	<h2>{{ page.title }}</h2>
-	<h4 class="grey"><i>Written by {{ page.author }} on {{ page.date | date: "%-d %B %Y"}}.</i></h2>
-	{% if page.description %}
-		<h4 class="grey"><i>"{{ page.description }}"</i></h4>
-	{% endif %}
-	{{ content }}
-	<hr />
-	<div class="navigation">
-		{% if page.previous.url %}
-			<a href="{{page.previous.url}}">Previous post</a>
-		{% endif %}
-		{% if page.next.url %}
-			<a href="{{page.next.url}}">Next post</a>
-		{% endif %}
-		<h4 class="footerright">
-			Tagged categories: {{ page.categories | array_to_sentence_string }}
-		</h4>
-	</div>
+	{% include embed_post.html post=page %}
 </div>
