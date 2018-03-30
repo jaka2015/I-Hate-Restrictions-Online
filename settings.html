@@ -2,8 +2,15 @@
 layout: default
 ---
 
-{{ page.url }}
-
+<h1>Settings</h1>
+<div class="short"><hr /></div>
+<h3>
+	Welcome! You can customise colours and other settings here. They'll save when you press "Save".
+	<br />
+	You can revert your changes at any time by pressing "Reset".
+</h3>
+<h2>Colour Settings</h2>
+<div class="short"><hr /></div>
 <form id="settings">
 	<ul>
 		<li><input type="color" id="primary" value="{{ site.primary }}" />Primary Colour</li>
@@ -13,8 +20,14 @@ layout: default
 		<li><input type="color" id="highlight" value="{{ site.highlight }}" />Highlight Colour</li>
 	</ul>
 	<input type="reset" />
-	<input type="submit" />
+	<input type="submit" value="Save" />
 </form>
+
+<h2>Currency Settings</h2>
+<div class="short"><hr /></div>
+<h3>
+	Currency settings TBD
+</h3>
 <script>
 function setColorHook(id, callback) {
 	document.getElementById(id).oninput = function(e) {
