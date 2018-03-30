@@ -31,7 +31,7 @@ primary:    "#000000"
 secondary:  "#000000"
 background: "#161616"
 foreground: "#d1d1d1"
-highlight:  "#000000"
+highlight:  "gray"
 
 # Build settings
 markdown: kramdown

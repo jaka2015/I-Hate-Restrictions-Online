@@ -1,10 +1,12 @@
+---
+---
 /* vim: set noexpandtab: */
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 @import url('https://fonts.googleapis.com/css?family=Material+Icons');
 
 body {
-	background: #161616;
-	color: #d1d1d1;
+	background: {{ site.background }};
+	color: {{ site.foreground }};
 	font-family: Roboto,Helvetica,Arial,sans-serif;
 	text-align: center;
 	font-weight: 100;
@@ -35,7 +37,7 @@ a {
 }
 
 a:hover {
-	color: grey;
+	color: {{ site.highlight }};
 }
 
 .mid {

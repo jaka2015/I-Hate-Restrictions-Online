@@ -12,8 +12,8 @@ A blog post has to start with this:
 ```
 ---
 layout: post
-title:  "The best title you can come up with!"
-date:   2018-01-01 01:00:00 +0100
+title:	"The best title you can come up with!"
+date:	2018-01-01 01:00:00 +0100
 author: Me!
 description: "Wow, my post can be described here!"
 categories: software

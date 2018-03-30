@@ -1,11 +1,19 @@
 ---
 ---
+function addCss(selector, key, value) {
+	let element = document.createElement("style");
+	element.innerHTML = selector + " { " + key + ": " + value + "; }";
+	document.head.appendChild(element);
+}
+
 window.onload = function() {
 	document.getElementById("menu_toggle").onclick = function() {
 		document.getElementById("desktop").classList.toggle("hidden");
 	};
-	document.body.style.background = localStorage.getItem("background") || "{{ site.background }}";
-	document.body.style.color      = localStorage.getItem("foreground") || "{{ site.foreground }}";
+
+	{ let value = localStorage.getItem("background"); if (value != null) { document.body.style.background = value; }}
+	{ let value = localStorage.getItem("foreground"); if (value != null) { document.body.style.color = value; }}
+	{ let value = localStorage.getItem("highlight");  if (value != null) { addCss("a:hover", "color", value); }}
 
 	let posts = document.getElementsByClassName("post");
 	if (posts.length > 0) {

@@ -29,28 +29,34 @@ layout: default
 	Currency settings TBD
 </h3>
 <script>
-function setColorHook(id, callback) {
-	document.getElementById(id).oninput = function(e) {
+function setColorHook(element, callback) {
+	element.oninput = function(e) {
 		callback(e.target.value);
 	}
 }
 
-{ let value = localStorage.getItem("primary"); if (value != null) { document.getElementById("primary").value = value } }
-{ let value = localStorage.getItem("secondary"); if (value != null) { document.getElementById("secondary").value = value } }
-{ let value = localStorage.getItem("background"); if (value != null) { document.getElementById("background").value = value } }
-{ let value = localStorage.getItem("foreground"); if (value != null) { document.getElementById("foreground").value = value } }
-{ let value = localStorage.getItem("highlight"); if (value != null) { document.getElementById("highlight").value = value } }
+let primary = document.getElementById("primary");
+let secondary = document.getElementById("secondary");
+let background = document.getElementById("background");
+let foreground = document.getElementById("foreground");
+let highlight = document.getElementById("highlight");
 
-setColorHook("background", function(val) { document.body.style.background = val; });
-setColorHook("foreground", function(val) { document.body.style.color = val; });
+{ let value = localStorage.getItem("primary"); if (value != null) { primary.value = value } }
+{ let value = localStorage.getItem("secondary"); if (value != null) { secondary.value = value } }
+{ let value = localStorage.getItem("background"); if (value != null) { background.value = value } }
+{ let value = localStorage.getItem("foreground"); if (value != null) { foreground.value = value } }
+{ let value = localStorage.getItem("highlight"); if (value != null) { highlight.value = value } }
+
+setColorHook(background, function(val) { document.body.style.background = val; });
+setColorHook(foreground, function(val) { document.body.style.color = val; });
 
 let settings = document.getElementById("settings");
 settings.onsubmit = function() {
-	localStorage.setItem("primary", document.getElementById("primary").value);
-	localStorage.setItem("secondary", document.getElementById("secondary").value);
-	localStorage.setItem("background", document.getElementById("background").value);
-	localStorage.setItem("foreground", document.getElementById("foreground").value);
-	localStorage.setItem("highlight", document.getElementById("highlight").value);
+	localStorage.setItem("primary", primary.value);
+	localStorage.setItem("secondary", secondary.value);
+	localStorage.setItem("background", background.value);
+	localStorage.setItem("foreground", foreground.value);
+	localStorage.setItem("highlight", highlight.value); addCss("a:hover", "color", value);
 	return false;
 };
 settings.onreset = function() {
@@ -58,6 +64,6 @@ settings.onreset = function() {
 	localStorage.removeItem("secondary");
 	localStorage.removeItem("background"); document.body.style.background = "{{ site.background }}";
 	localStorage.removeItem("foreground"); document.body.style.color	  = "{{ site.foreground }}";
-	localStorage.removeItem("highlight");
+	localStorage.removeItem("highlight"); addCss("a:hover", "color", "{{ site.highlight }}");
 }
 </script>
