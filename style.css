@@ -234,7 +234,7 @@ footer {
 }
 
 .currency {
-	color: orange;
+	color: {{ site.secondary }};
 	position: relative;
 }
 .currency::before {
