@@ -460,5 +460,16 @@ i.material-icons {
 	vertical-align: bottom;
 }
 
+.cusett {
+	display: inline-block;
+	text-align: left;
+}
+
+.cusett input {
+	display: block;
+	height: 30px;
+	position: relative;
+}
+
 /* Really lazy work-around. It works. */
 .block h5 { height: 100px }

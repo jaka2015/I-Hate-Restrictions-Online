@@ -27,13 +27,30 @@ layout: default
 <h2>Currency Settings</h2>
 <div class="short"><hr /></div>
 <h3>
-	Select currencies to automatically convert:
+	Select currencies to automatically convert:</legend>
 </h3>
-<input type="checkbox" value="None, do not convert currencies." />
-<input type="checkbox" value="All" checked />
-<input type="checkbox" value="GBP" />
-<input type="checkbox" value="USD" />
-<input type="checkbox" value="EUR" />
+<div>
+	<input type="radio" value="none" />
+	<label>None, do not convert currencies.</label>
+</div>
+<div>
+	<input type="radio" value="all" checked />
+	<label>Convert all currencies.</label>
+</div>
+<div>
+	<input type="checkbox" value="GBP" />
+	<label>GBP [£]</label>
+</div>
+<div>
+	<input type="checkbox" value="USD" />
+	<label>USD [$]</label>
+</div>
+<div>
+	<input type="checkbox" value="EUR" />
+	<label>EUR [€]</label>
+</div>
+<div class="short" style="padding-bottom: 25px"><hr /></div>
+
 <script>
 function setColorHook(element, callback) {
 	element.oninput = function(e) {
