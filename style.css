@@ -15,7 +15,7 @@ body {
 	margin-bottom: 64px;
 }
 h1 {
-	color: #ffc854;
+	color: {{ site.primary }};
 }
 h1, h2, h3, h4, h5 {
 	font-weight: 300;
@@ -33,7 +33,7 @@ a {
 	-moz-transition: color 350ms;
 	-webkit-transition: color 350ms;
 	transition: color 350ms;
-	color: #ffaf00;
+	color: {{ site.secondary }};
 }
 
 a:hover {
@@ -49,7 +49,7 @@ a:hover {
 	font-weight: 100;
 }
 
-.headerbg { 
+.headerbg {
 	background: linear-gradient(275deg, #4286f4, #002f7c, #65007f);
 	background-size: 350%;
 	-webkit-animation: bg 20s ease infinite;
@@ -72,7 +72,7 @@ a:hover {
 /* Header */
 header {
 	background: rgba(0, 0, 0, 0.4);
-	border-top: 2px solid #ffaf00;
+	border-top: 2px solid {{ site.secondary }};
 	box-shadow: 0 0 4px black;
 	height: 64px;
 	width: 100%;
@@ -139,9 +139,8 @@ footer {
 .footerright a {
 	color: inherit;
 }
-
 .footerright a:hover {
-	color: #ffaf00;
+	color: {{ site.secondary }};
 }
 
 .footerleft {

@@ -19,8 +19,9 @@ layout: default
 		<li><input type="color" id="foreground" value="{{ site.foreground }}" />Foreground Colour</li>
 		<li><input type="color" id="highlight" value="{{ site.highlight }}" />Highlight Colour</li>
 	</ul>
+	<p><small>Note: Only some of these changes take effect immediately</small></p>
 	<input type="reset" />
-	<input type="submit" value="Save" />
+	<input type="submit" value="Save & Update" />
 </form>
 
 <h2>Currency Settings</h2>
@@ -47,23 +48,23 @@ let highlight = document.getElementById("highlight");
 { let value = localStorage.getItem("foreground"); if (value != null) { foreground.value = value } }
 { let value = localStorage.getItem("highlight"); if (value != null) { highlight.value = value } }
 
-setColorHook(background, function(val) { document.body.style.background = val; });
-setColorHook(foreground, function(val) { document.body.style.color = val; });
+setColorHook(background, setBackground);
+setColorHook(foreground, setForeground);
 
 let settings = document.getElementById("settings");
 settings.onsubmit = function() {
-	localStorage.setItem("primary", primary.value);
-	localStorage.setItem("secondary", secondary.value);
+	localStorage.setItem("primary", primary.value); setPrimary(primary.value);
+	localStorage.setItem("secondary", secondary.value); setSecondary(secondary.value);
 	localStorage.setItem("background", background.value);
 	localStorage.setItem("foreground", foreground.value);
-	localStorage.setItem("highlight", highlight.value); addCss("a:hover", "color", value);
+	localStorage.setItem("highlight", highlight.value); setHighlight(highlight.value);
 	return false;
 };
 settings.onreset = function() {
-	localStorage.removeItem("primary");
-	localStorage.removeItem("secondary");
-	localStorage.removeItem("background"); document.body.style.background = "{{ site.background }}";
-	localStorage.removeItem("foreground"); document.body.style.color	  = "{{ site.foreground }}";
-	localStorage.removeItem("highlight"); addCss("a:hover", "color", "{{ site.highlight }}");
+	localStorage.removeItem("primary"); setPrimary("{{ site.primary }}")
+	localStorage.removeItem("secondary"); setSecondary("{{ site.secondary }}");
+	localStorage.removeItem("background"); setBackground("{{ site.background }}");
+	localStorage.removeItem("foreground"); setForeground("{{ site.foreground }}");
+	localStorage.removeItem("highlight"); setHighlight("{{ site.highlight }}");
 }
 </script>

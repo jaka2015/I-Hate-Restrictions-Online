@@ -27,11 +27,11 @@ url: "https://i-hate-restricions.online/" # the base hostname & protocol for you
 twitter_username: FadedMnpn
 github_username:  Mnpn03
 
-primary:    "#000000"
-secondary:  "#000000"
+primary:    "#ffc854"
+secondary:  "#ffaf00"
 background: "#161616"
 foreground: "#d1d1d1"
-highlight:  "gray"
+highlight:  "#808080"
 
 # Build settings
 markdown: kramdown

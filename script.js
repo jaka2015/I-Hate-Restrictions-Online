@@ -5,15 +5,34 @@ function addCss(selector, key, value) {
 	element.innerHTML = selector + " { " + key + ": " + value + "; }";
 	document.head.appendChild(element);
 }
+function setPrimary(value) {
+	addCss("h1", "color", value);
+}
+function setSecondary(value) {
+	addCss("a", "color", value);
+	addCss(".footerright a:hover", "color", value);
+	addCss("header", "border-top", "2px solid " + value);
+}
+function setBackground(value) {
+	document.body.style.background = value;
+}
+function setForeground(value) {
+	document.body.style.color = value;
+}
+function setHighlight(value) {
+	addCss("a:hover", "color", value);
+}
 
 window.onload = function() {
 	document.getElementById("menu_toggle").onclick = function() {
 		document.getElementById("desktop").classList.toggle("hidden");
 	};
 
-	{ let value = localStorage.getItem("background"); if (value != null) { document.body.style.background = value; }}
-	{ let value = localStorage.getItem("foreground"); if (value != null) { document.body.style.color = value; }}
-	{ let value = localStorage.getItem("highlight");  if (value != null) { addCss("a:hover", "color", value); }}
+	{ let value = localStorage.getItem("primary"); if (value != null) { setPrimary(value); }}
+	{ let value = localStorage.getItem("secondary"); if (value != null) { setSecondary(value); }}
+	{ let value = localStorage.getItem("background"); if (value != null) { setBackground(value); }}
+	{ let value = localStorage.getItem("foreground"); if (value != null) { setForeground(value); }}
+	{ let value = localStorage.getItem("highlight");  if (value != null) { setHighlight(value); }}
 
 	let posts = document.getElementsByClassName("post");
 	if (posts.length > 0) {
