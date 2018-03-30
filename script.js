@@ -10,6 +10,7 @@ function setPrimary(value) {
 }
 function setSecondary(value) {
 	addCss("a", "color", value);
+	addCss(".currency, .block", "color", value);
 	addCss(".footerright a:hover", "color", value);
 	addCss("header", "border-top", "2px solid " + value);
 }
