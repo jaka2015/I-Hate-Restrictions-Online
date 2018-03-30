@@ -4,9 +4,8 @@ window.onload = function() {
 	document.getElementById("menu_toggle").onclick = function() {
 		document.getElementById("desktop").classList.toggle("hidden");
 	};
-
-	document.body.style.background = localStorage.getItem("color1") || "{{ site.color1 }}";
-	document.body.style.color	  = localStorage.getItem("color2") || "{{ site.color2 }}";
+	document.body.style.background = localStorage.getItem("background") || "{{ site.background }}";
+	document.body.style.color      = localStorage.getItem("foreground") || "{{ site.foreground }}";
 
 	let posts = document.getElementsByClassName("post");
 	if (posts.length > 0) {
