@@ -1,4 +1,50 @@
 ---
 layout: default
 ---
-<h1>Blank</h1>
+
+{{ page.url }}
+
+<form id="settings">
+	<ul>
+		<li><input type="color" id="color1" value="{{ site.color1 }}" />Color 1</li>
+		<li><input type="color" id="color2" value="{{ site.color2 }}" />Color 2</li>
+		<li><input type="color" id="color3" value="{{ site.color3 }}" />Color 3</li>
+		<li><input type="color" id="color4" value="{{ site.color4 }}" />Color 4</li>
+		<li><input type="color" id="color5" value="{{ site.color5 }}" />Color 5</li>
+	</ul>
+	<input type="reset" />
+	<input type="submit" />
+</form>
+<script>
+function setColorHook(id, callback) {
+	document.getElementById(id).oninput = function(e) {
+		callback(e.target.value);
+	}
+}
+
+if (localStorage.hasItem("color1")) { document.getElementById("color1").value = localStorage.getItem("color1"); }
+if (localStorage.hasItem("color2")) { document.getElementById("color2").value = localStorage.getItem("color2"); }
+if (localStorage.hasItem("color3")) { document.getElementById("color3").value = localStorage.getItem("color3"); }
+if (localStorage.hasItem("color4")) { document.getElementById("color4").value = localStorage.getItem("color4"); }
+if (localStorage.hasItem("color5")) { document.getElementById("color5").value = localStorage.getItem("color5"); }
+
+setColorHook("color1", function(val) { document.body.style.background = val; });
+setColorHook("color2", function(val) { document.body.style.color = val; });
+
+let settings = document.getElementById("settings");
+settings.onsubmit = function() {
+	localStorage.setItem("color1", document.getElementById("color1").value);
+	localStorage.setItem("color2", document.getElementById("color2").value);
+	localStorage.setItem("color3", document.getElementById("color3").value);
+	localStorage.setItem("color4", document.getElementById("color4").value);
+	localStorage.setItem("color5", document.getElementById("color5").value);
+	return false;
+};
+settings.onreset = function() {
+	localStorage.removeItem("color1"); document.body.style.background = "{{ site.color1 }}";
+	localStorage.removeItem("color2"); document.body.style.color	  = "{{ site.color2 }}";
+	localStorage.removeItem("color3");
+	localStorage.removeItem("color4");
+	localStorage.removeItem("color5");
+}
+</script>
