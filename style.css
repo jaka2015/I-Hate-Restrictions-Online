@@ -205,8 +205,7 @@ footer {
 }
 
 /* Mobile Optimising */
-.mobile { display: none; } 
-.desktop { display: inline; }
+.mobile { display: none; }
 
 @media only screen and (max-width: 700px) {
 	.mobile { display: inline; }
@@ -310,6 +309,58 @@ footer {
 .block:hover {
 	box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.3);
 	transform: scale(1.03);
+}
+
+.block img {
+	width: 20%;
+	height: 20%;
+	display: flex;
+}
+
+/* About */
+.lb {
+	position: fixed;
+	left: 75px;
+}
+
+.rb {
+	position: fixed;
+	right: 75px;
+}
+
+.us {
+	position: relative;
+}
+
+.divider {
+	position: absolute;
+	left: 50%;
+	top: 10%;
+	bottom: 10%;
+	border-left: 1px solid grey;
+}
+
+.about h1 {
+	margin-bottom: 0
+}
+
+.about hr {
+	width: 50%;
+	position: relative;
+	left: 50%;
+	transform: translate(-100%);
+}
+
+.short {
+	width: 25%;
+	position: relative;
+	left: 50%;
+	transform: translate(-50%);
+}
+
+.desktop .material-icons {
+	padding-bottom: 0;
+	vertical-align: bottom;
 }
 
 /* Really lazy work-around. It works. */
