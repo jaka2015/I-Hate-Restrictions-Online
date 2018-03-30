@@ -445,8 +445,7 @@ footer {
 	transform: translate(-50%);
 }
 
-.desktop .material-icons {
-	padding-bottom: 0;
+i.material-icons {
 	vertical-align: bottom;
 }
 
