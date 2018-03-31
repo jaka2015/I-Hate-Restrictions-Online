@@ -10,6 +10,7 @@ function setSecondary(value) {
 	addCss("a, .currency, .block", "color", value);
 	addCss(".footerright a:hover", "color", value);
 	addCss("header", "border-top", "2px solid " + value);
+	addCss("nav a:hover", "border-bottom", "3px solid " + value);
 }
 function setBackground(value) {
 	document.body.style.background = value;
