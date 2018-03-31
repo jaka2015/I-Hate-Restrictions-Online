@@ -20,6 +20,7 @@ function setForeground(value) {
 }
 function setHighlight(value) {
 	addCss("a:hover", "color", value);
+	addCss("footer", "box-shadow", "0 0 20px 0" + value + "5a");
 }
 
 window.onload = function() {
