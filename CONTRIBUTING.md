@@ -23,10 +23,6 @@ Your post content then goes here, markdown is enabled!
 A post *must* start with a layout, title and date. A category or author is not required, but it's certainly neat to have.
 Note that the author will be displayed on the published post.
 You can describe your post using the `description` tag. It is optional, and will show up at the top of the page and in other places.
-If you are using a lot of different currencies in your post and would prefer to automatically convert them all to USD, specify
-```
-to_usd: true
-```
 
 You can submit a file or just plain text, it doesn't really matter.
 The important thing is that you always create a [Pull Request](https://github.com/Mnpn03/I-Hate-Restrictions-Online/pulls)!

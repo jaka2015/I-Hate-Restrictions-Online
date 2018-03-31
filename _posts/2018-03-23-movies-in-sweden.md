@@ -4,7 +4,6 @@ title:  "Watching a movie in Sweden"
 date:   2018-03-23 11:40:00 +0100
 author: jD91mZM2
 description: "And people wonder why the pirating rates for movies are so high.."
-to_usd: true
 categories: prices
 ---
 Two days ago I wanted to watch a movie!

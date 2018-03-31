@@ -1,10 +1,3 @@
-<script>
-	{% if include.post.to_usd %}
-		let toUsd = true;
-	{% else %}
-		let toUsd = false;
-	{% endif %}
-</script>
 <h2>{{ include.post.title }}</h2>
 <h4 class="grey"><i>Written by {{ include.post.author }} on {{ include.post.date | date: "%-d %B %Y"}}.</i></h2>
 {% if include.post.description %}

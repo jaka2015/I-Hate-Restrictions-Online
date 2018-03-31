@@ -11,7 +11,7 @@ layout: default
 </h3>
 <h2>Colour Settings</h2>
 <div class="short"><hr /></div>
-<form id="settings">
+<form id="colors">
 	<ul>
 		<li><input type="color" id="primary" value="{{ site.primary }}" />Primary Colour</li>
 		<li><input type="color" id="secondary" value="{{ site.secondary }}" />Secondary Colour</li>
@@ -29,26 +29,12 @@ layout: default
 <h3>
 	Select currencies to automatically convert:</legend>
 </h3>
-<div>
-	<input type="radio" value="none" />
-	<label>None, do not convert currencies.</label>
-</div>
-<div>
-	<input type="radio" value="all" checked />
-	<label>Convert all currencies.</label>
-</div>
-<div>
-	<input type="checkbox" value="GBP" />
-	<label>GBP [£]</label>
-</div>
-<div>
-	<input type="checkbox" value="USD" />
-	<label>USD [$]</label>
-</div>
-<div>
-	<input type="checkbox" value="EUR" />
-	<label>EUR [€]</label>
-</div>
+<form id="currency">
+    <label><input type="radio" name="currency" value="original" />Nope, do not convert currencies</label><br />
+    <label><input type="radio" name="currency" value="usd" checked />USD ($)</label><br />
+    <label><input type="radio" name="currency" value="eur" />EUR (€)</label><br />
+    <label><input type="radio" name="currency" value="gbp" />GBP (₤)</label>
+</form>
 <div class="short" style="padding-bottom: 25px"><hr /></div>
 
 <script>
@@ -73,8 +59,8 @@ let highlight = document.getElementById("highlight");
 setColorHook(background, setBackground);
 setColorHook(foreground, setForeground);
 
-let settings = document.getElementById("settings");
-settings.onsubmit = function() {
+let colors = document.getElementById("colors");
+colors.onsubmit = function() {
 	localStorage.setItem("primary", primary.value); setPrimary(primary.value);
 	localStorage.setItem("secondary", secondary.value); setSecondary(secondary.value);
 	localStorage.setItem("background", background.value);
@@ -82,11 +68,26 @@ settings.onsubmit = function() {
 	localStorage.setItem("highlight", highlight.value); setHighlight(highlight.value);
 	return false;
 };
-settings.onreset = function() {
+colors.onreset = function() {
 	localStorage.removeItem("primary"); setPrimary("{{ site.primary }}")
 	localStorage.removeItem("secondary"); setSecondary("{{ site.secondary }}");
 	localStorage.removeItem("background"); setBackground("{{ site.background }}");
 	localStorage.removeItem("foreground"); setForeground("{{ site.foreground }}");
 	localStorage.removeItem("highlight"); setHighlight("{{ site.highlight }}");
+}
+
+{
+    let value = localStorage.getItem("currency");
+    if (value != null) {
+        value = value.replace(/["\\]/g, "\\$&"); // $& == $0 in other languages
+        document.querySelector("#currency input[value=\"" + value + "\"]").checked = true;
+    }
+}
+
+for (let radio of document.querySelectorAll("#currency input[name=\"currency\"]")) {
+    radio.onchange = function(e) {
+        let value = document.querySelector("#currency input[name=\"currency\"]:checked").value;
+        localStorage.setItem("currency", value);
+    };
 }
 </script>

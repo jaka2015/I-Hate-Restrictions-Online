@@ -1,5 +1,3 @@
----
----
 function addCss(selector, key, value) {
 	let element = document.createElement("style");
 	element.innerHTML = selector + " { " + key + ": " + value + "; }";
@@ -9,8 +7,7 @@ function setPrimary(value) {
 	addCss("h1", "color", value);
 }
 function setSecondary(value) {
-	addCss("a", "color", value);
-	addCss(".currency, .block", "color", value);
+	addCss("a, .currency, .block", "color", value);
 	addCss(".footerright a:hover", "color", value);
 	addCss("header", "border-top", "2px solid " + value);
 }
@@ -70,18 +67,24 @@ window.onload = function() {
 
 							let value = parseInt(amount) / rates[from];
 							let usd = value * rates["USD"];
+                            let eur = value * rates["EUR"];
+                            let gbp = value * rates["GBP"];
 
 							let text;
-							if (toUsd) {
-								text = "$" + Math.round(usd);
-							} else {
-								text = match;
-							}
+                            switch (localStorage.getItem("currency")) {
+                            case null:
+                            case "original":
+                                text = match;
+                                break;
+                            case "usd": text = "$" + Math.round(usd); break;
+                            case "eur": text = "€" + Math.round(eur); break;
+                            case "gbp": text = "₤" + Math.round(gbp); break;
+                            }
 
 							return '<span class="currency" data-amount="' +
 								"$" + usd.toFixed(2) + "\n" +
-								"€" + (value * rates["EUR"]).toFixed(2) + "\n" +
-								"₤" + (value * rates["GBP"]).toFixed(2) +
+								"€" + eur.toFixed(2) + "\n" +
+								"₤" + gbp.toFixed(2) +
 							'">' + text + '</span>';
 						}
 					);
