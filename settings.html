@@ -5,8 +5,7 @@ layout: default
 <h1>Settings</h1>
 <div class="short"><hr /></div>
 <h3>
-	Welcome! You can customise colours and other settings here. They'll save when you press "Save".
-	<br />
+	Welcome! You can customise colours and other settings here. They'll save when you press "Save".<br />
 	You can revert your changes at any time by pressing "Reset".
 </h3>
 <h2>Colour Settings</h2>
@@ -30,14 +29,16 @@ layout: default
 	Some posts may contain currencies, e.g. £2 or 20 SEK.<br />
 	We can automatically convert them for you.<br />
 	Alternatively, you can keep the post's default currency by selecting "None".<br />
-	Select what currency to automatically convert to:
 </h3>
-<form id="currency">
-	<label><input type="radio" name="currency" value="original" />None, do not convert currencies.</label><br />
-	<label><input type="radio" name="currency" value="gbp" />GBP (₤)</label><br />
-	<label><input type="radio" name="currency" value="eur" />EUR (€)</label><br />
-	<label><input type="radio" name="currency" value="usd" />USD ($)</label>
-</form>
+<fieldset>
+	<legend>Select what currency to automatically convert to:</legend>
+	<form id="currency">
+		<label><input type="radio" name="currency" value="original" />None, do not convert currencies.</label><br />
+		<label><input type="radio" name="currency" value="gbp" />GBP (₤)</label><br />
+		<label><input type="radio" name="currency" value="eur" />EUR (€)</label><br />
+		<label><input type="radio" name="currency" value="usd" />USD ($)</label>
+	</form>
+</fieldset>
 <div class="short" style="padding-bottom: 25px"><hr /></div>
 
 <script>

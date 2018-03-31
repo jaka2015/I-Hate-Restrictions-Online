@@ -114,6 +114,11 @@ ul input {
 	margin-right: 20px;
 }
 
+fieldset {
+	width: 40%;
+	margin: auto;
+}
+
 /* Footer */
 footer {
 	position: fixed;
