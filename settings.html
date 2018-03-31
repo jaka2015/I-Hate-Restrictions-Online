@@ -33,10 +33,10 @@ layout: default
 	Select what currency to automatically convert to:
 </h3>
 <form id="currency">
-    <label><input type="radio" name="currency" value="original" />None, do not convert currencies.</label><br />
-    <label><input type="radio" name="currency" value="gbp" />GBP (₤)</label><br />
-    <label><input type="radio" name="currency" value="eur" />EUR (€)</label><br />
-    <label><input type="radio" name="currency" value="usd" />USD ($)</label>
+	<label><input type="radio" name="currency" value="original" />None, do not convert currencies.</label><br />
+	<label><input type="radio" name="currency" value="gbp" />GBP (₤)</label><br />
+	<label><input type="radio" name="currency" value="eur" />EUR (€)</label><br />
+	<label><input type="radio" name="currency" value="usd" />USD ($)</label>
 </form>
 <div class="short" style="padding-bottom: 25px"><hr /></div>
 
@@ -80,17 +80,17 @@ colors.onreset = function() {
 }
 
 {
-    let value = localStorage.getItem("currency");
-    if (value != null) {
-        value = value.replace(/["\\]/g, "\\$&"); // $& == $0 in other languages
-        document.querySelector("#currency input[value=\"" + value + "\"]").checked = true;
-    }
+	let value = localStorage.getItem("currency");
+	if (value != null) {
+		value = value.replace(/["\\]/g, "\\$&"); // $& == $0 in other languages
+		document.querySelector("#currency input[value=\"" + value + "\"]").checked = true;
+	}
 }
 
 for (let radio of document.querySelectorAll("#currency input[name=\"currency\"]")) {
-    radio.onchange = function(e) {
-        let value = document.querySelector("#currency input[name=\"currency\"]:checked").value;
-        localStorage.setItem("currency", value);
-    };
+	radio.onchange = function(e) {
+		let value = document.querySelector("#currency input[name=\"currency\"]:checked").value;
+		localStorage.setItem("currency", value);
+	};
 }
 </script>
