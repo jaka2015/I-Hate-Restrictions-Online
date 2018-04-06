@@ -41,7 +41,7 @@ A file must follow the naming scheme of `YYYY-MM-DD-name-of-post.markdown`, and 
 
 If you have submitted your post without following these guidelines, the Pull Request will most likely be closed.
 
-So, how long will it take for my post to get reviewed?
+So, how long will it take for my post to get reviewed? It usually does not take that long, we'll check it within 24-48 hours.
 
 Was that a lot to take in at once? Thanks to you the blog expands with great creative rants written by all of you. That's some dedication!
 
